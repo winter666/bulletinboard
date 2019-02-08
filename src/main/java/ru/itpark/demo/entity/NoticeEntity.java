@@ -19,6 +19,7 @@ public class NoticeEntity {
     private int id;
     @Column(nullable = false)
     private String name;
+    private String category;
     @Column(nullable=false)
     private String content;
     private String email;

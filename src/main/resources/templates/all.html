@@ -17,6 +17,16 @@
 <h1>Bulletin Board</h1>
 
 </div>
+<div style="background-color: olivedrab; color:#ffffff; width: 25%">
+    Search by categories:
+    <ul>
+        <li data-th-each="item : ${items}" class="item">
+            <a data-th-href="@{/{id}(id=${item.category})}">
+                [[${item.category}]]
+            </a>
+        </li>
+    </ul>
+</div>
 <div style="background-color: white; width: 25%">
 <ul>
     <li data-th-each="item : ${items}" class="item">
