@@ -40,11 +40,16 @@ public class NoticeService {
         repository.save(entity);
     }
 
+
     public void removeById(int id){
         repository.deleteById(id);
     }
     public List<NoticeEntity> findByName(String name){
         return repository.findAllByNameContainsIgnoreCaseOrderByNumberDesc(name);
+    }
+
+    public List<NoticeEntity> findByCategories(String category){
+        return repository.findAllByCategory(category);
     }
 
 

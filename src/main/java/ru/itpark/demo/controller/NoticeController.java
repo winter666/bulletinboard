@@ -60,5 +60,11 @@ public class NoticeController {
         model.addAttribute("items", service.findByName(name));
         return "all";
     }
+    @GetMapping(value="/search", params="category")
+    public String searchByCategory(@RequestParam String category, Model model){
+        model.addAttribute("category", category);
+        model.addAttribute("items", service.findByCategories(category));
+        return "all";
+    }
 
 }

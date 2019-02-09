@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface NoticeRepository extends JpaRepository<NoticeEntity, Integer> {
     List<NoticeEntity> findAllByNameContainsIgnoreCaseOrderByNumberDesc(String name);
+    List<NoticeEntity> findAllByCategory(String category);
 }
