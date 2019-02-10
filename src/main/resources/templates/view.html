@@ -15,7 +15,7 @@
 <p>Category: [[${item.category}]]</p>
 </div>
 <div style="background-color: beige; width: 50%">
-    <p><h1>[[${item.content}]]</h1></p>
+    <h1>[[${item.content}]]</h1>
 
 </div>
 <hr style="color: olivedrab"/>
@@ -24,8 +24,26 @@
 
 <a data-th-href="@{/{id}/edit(id=${item.id})}"><button style="background-color: olivedrab; color: #ffffff;">Edit</button></a>
 <a data-th-href="@{/{id}/remove(id=${item.id})}"><button style="background-color: olivedrab; color: #ffffff;">Remove</button></a>
-
+<hr width="15%" align="left"/>
 <!--Подумать над Комментариями-->
+<form method="post">
+    <p><label>Name: </label>
+        <input name="author">
+    </p>
+    <p>
+        <label>Enter your comment:</label>
+        <br/>
+         <textarea name="text"></textarea>
+    </p>
+    <button>Send</button>
+</form>
+
+<div data-th-each="comment : ${comments}">
+    <h4>[[${comment.author}]]</h4>
+    <p>[[${comment.text}]]</p>
+    <hr style="width: 30%" align="left"/>
+</div>
+
 
 </body>
 </html>

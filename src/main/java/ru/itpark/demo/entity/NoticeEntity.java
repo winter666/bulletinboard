@@ -24,4 +24,5 @@ public class NoticeEntity {
     private String content;
     private String email;
     private long number;
+
 }

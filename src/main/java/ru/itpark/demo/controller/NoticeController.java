@@ -3,7 +3,6 @@ package ru.itpark.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.itpark.demo.dto.NoticeDto;
 import ru.itpark.demo.entity.NoticeEntity;
 import ru.itpark.demo.service.NoticeService;
 

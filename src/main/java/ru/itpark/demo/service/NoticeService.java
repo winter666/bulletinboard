@@ -1,7 +1,6 @@
 package ru.itpark.demo.service;
 
 import org.springframework.stereotype.Service;
-import ru.itpark.demo.dto.NoticeDto;
 import ru.itpark.demo.entity.NoticeEntity;
 import ru.itpark.demo.exception.NoticeNotFoundException;
 import ru.itpark.demo.repository.NoticeRepository;
@@ -29,17 +28,10 @@ public class NoticeService {
         return repository.findById(id).orElse(new NoticeEntity());
     }
 
-    public void save(NoticeDto item){
-        NoticeEntity entity=getByIdOrEmpty(item.getId());
-        entity.setName(item.getName());
-        entity.setContent(item.getContent());
-//        repository.save(item);
 
-    }
     public void add(NoticeEntity entity){
         repository.save(entity);
     }
-
 
     public void removeById(int id){
         repository.deleteById(id);
@@ -51,6 +43,8 @@ public class NoticeService {
     public List<NoticeEntity> findByCategories(String category){
         return repository.findAllByCategory(category);
     }
+
+
 
 
 

@@ -1,4 +1,4 @@
-package ru.itpark.demo.dto;
+package ru.itpark.demo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class NoticeDto {
-    private int id;
-    private String name;
-    private String content;
+public class Comment {
+    private String author;
+    private String text;
 
 }
